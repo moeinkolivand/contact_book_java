@@ -51,9 +51,4 @@ public class ContactSeeder {
         return String.format("(%03d) %03d-%04d", area, prefix, line);
     }
 
-    // Quick demo
-    public static void main(String[] args) {
-        List<Contact> contacts = generateContacts(10);
-        contacts.forEach(System.out::println);
-    }
 }
