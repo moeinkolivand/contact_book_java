@@ -51,4 +51,16 @@ public class ContactSeeder {
         return String.format("(%03d) %03d-%04d", area, prefix, line);
     }
 
+    public static List<Contact> generateInvalidContacts() {
+        List<Contact> invalid = new ArrayList<>();
+
+        invalid.add(new Contact("", "jane@example.com", "9876543210"));
+        invalid.add(new Contact("Bob Smith", "bobexample.com", "5551234567"));
+        invalid.add(new Contact("Charlie Brown", "charlie@test.org", "abc-123-xyz"));
+        invalid.add(new Contact("Diana Prince", "diana@contact.net", "(555) 123-4567"));
+        invalid.add(new Contact("Eve Adams", "eve@demo.io", "1234567890"));
+        invalid.add(new Contact("   ", "whitespace@example.com", "1112223333"));
+
+        return invalid;
+    }
 }
