@@ -17,6 +17,10 @@ public class Contact implements Comparable<Contact> {
         this.phone = phone;
     }
 
+    public Contact() {
+        this("", "", "0000000000");
+    }
+
     public String getPhone() {
         return phone;
     }
