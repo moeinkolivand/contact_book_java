@@ -80,7 +80,7 @@ public class App {
                 .and(predicateHasPhoneNumber)
                 .or(predictHasValidEmail.negate());
 
-        List<Contact> filteredContactList = FilterContacs.filterContacs(invalidContacts, complexFilter);
+        List<Contact> filteredContactList = FilterContacts.filterContacts(invalidContacts, complexFilter);
 
         System.out.println("\n--- Filtered Contacts ---");
         filteredContactList.forEach(prettyPrintContact);
