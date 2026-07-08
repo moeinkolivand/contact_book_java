@@ -1,11 +1,17 @@
 package com.tutorial.contact;
 
+
+import java.util.function.Predicate;
+
 public class Contact implements Comparable<Contact> {
     private final String name;
     private final String email;
     private final String phone;
 
     public Contact(String name, String email, String phone) {
+        if (phone == null || phone.isEmpty() || phone.isBlank()) {
+            throw new IllegalArgumentException("PhoneNumber Cannot Be Blank Or Null");
+        }
         this.name = name;
         this.email = email;
         this.phone = phone;
